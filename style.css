@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 15px;
+}
+
+body{
+  background-color:hsl(233, 47%, 7%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2.0rem;
+}
+
+p{
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.preview{
+  padding-bottom: 20%;
+}
+
+.preview > h1 > span{
+  color: hsl(277, 64%, 61%);
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  max-width: 1010px;
+  width: 90%;
+  color: white;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+}
+
+.picture{
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+img{
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+header{
+  grid-row: 1/3;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+
+.preview p{
+  line-height: 1.7;
+}
+
+.stats{
+  display: flex;
+  gap: 20%;
+}
+
+.stats > div > p{
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.stats > div > p >span{
+  font-weight: 100;
+  font-size: 10px;
+}
+
+@media (max-width:600px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  .preview{
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10% ;
+  }
+
+  .picture{
+    width: 100%;
+    order: -1;
+  }
+
+  .stats{
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stats > div{
+    margin-bottom: 15px;
+  }
+}
+
+
+
